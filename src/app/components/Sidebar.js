@@ -9,12 +9,12 @@ import {
 } from "react-icons/pi";
 import { RiMicLine } from "react-icons/ri";
 
-export const Sidebar = () => {
+export const Sidebar = ({ children }) => {
   const router = useRouter();
   return (
     <div className="flex">
-      <div className="fixed h-screen py-12 px-4 border-r-1 flex flex-col justify-between ">
-        <div className="flex  flex-col ">
+      <div className="fixed h-screen py-12 px-4 border-r-1 flex flex-col justify-around">
+        <div className="flex  flex-col flex-1">
           <Link href={"/overview"}>
             <div
               className={`${
@@ -52,7 +52,7 @@ export const Sidebar = () => {
             <span className=" bg-[#DEE5EA] w-16 h-4 rounded-md"></span>
           </div>
         </div>
-        <div className="flex flex-col text-[#8D9499]">
+        <div className="flex flex-col text-[#8D9499] ">
           <div className="flex items-center ">
             <RiMicLine size={25} />
             <span className="ml-1">Orbit HR</span>
@@ -72,6 +72,7 @@ export const Sidebar = () => {
           </div>
         </div>
       </div>
+      <main className="w-full  ">{children}</main>
     </div>
   );
 };
