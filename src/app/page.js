@@ -2,10 +2,13 @@ import Link from "next/link";
 import Button from "./components/Button";
 import { BsStars } from "react-icons/bs";
 import { PiNumberCircleEightFill } from "react-icons/pi";
+import { BsArrowsAngleExpand } from "react-icons/bs";
+import profile from "../../public/profile.jpg";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex flex-col ml-60 mr-8 mt-8 mb-4 bg-white h-[45rem] p-8 rounded-[15px] overflow-hidden">
+    <main className="flex flex-col ml-60 mr-8 mt-3 mb-4 bg-white h-[45rem] p-8 rounded-[15px] overflow-hidden">
       <div className="flex justify-between w-full">
         <div className="flex flex-col ">
           <span className=" bg-[#DEE5EA] w-56 h-8 rounded-full mb-2"></span>
@@ -71,16 +74,31 @@ export default function Home() {
 
             <span className="bg-[#DEE5EA] w-16 h-6 rounded-full mt-3"></span>
           </div>
+          {/* //Profile div */}
           <div className="flex items-center justify-between">
             <div className="flex gap-x-2 items-center">
-              <span className="bg-[#DEE5EA] w-10 h-10 rounded-full mt-3"></span>
+              <span className="w-10 h-10 rounded-full mt-3">
+                <Image
+                  src={profile}
+                  width={40}
+                  height={60}
+                  layout="responsive"
+                  className="rounded-full"
+                ></Image>
+              </span>
               <div className="w-full flex flex-col">
-                <span className="bg-[#DEE5EA] w-16 h-3 rounded-full mb-2"></span>
-                <span className="bg-[#DEE5EA] w-32 h-3 rounded-full"></span>
+                <span className="text-black h-3  mb-2 font-bold">
+                  Ekemini Mark
+                </span>
+                <span className="text-[#8D9499] mb-1 h-3 text-sm">
+                  Applied for: Product Designer/Con...
+                </span>
               </div>
             </div>
-
-            <span className="bg-[#DEE5EA] w-16 h-6 rounded-full mt-3"></span>
+            <div className="flex items-center gap-x-2   h-6  mt-3 justify-center">
+              <BsArrowsAngleExpand size={15} color="#2194FF" />
+              <span className="text-black font-bold">View</span>
+            </div>
           </div>
           <div className="flex items-center justify-between">
             <div className="flex gap-x-2 items-center">

@@ -1,47 +1,30 @@
 "use client";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
 import React from "react";
-import {
-  PiStackSimpleLight,
-  PiChartBarHorizontalLight,
-  PiFlagCheckeredLight,
-} from "react-icons/pi";
 import { RiMicLine } from "react-icons/ri";
+import { data } from "../data";
+import LinkComponent from "./LinkComponent";
 
 export const Sidebar = ({ children }) => {
-  const router = useRouter();
   return (
     <div className="flex">
       <div className="fixed h-screen py-12 px-4 border-r-1 flex flex-col justify-around">
         <div className="flex  flex-col flex-1">
-          <Link href={"/overview"}>
-            <div
-              className={`${
-                router.pathname === "/overview"
-                  ? "text-black"
-                  : "text-[#8D9499] p-3 rounded-lg flex  items-center gap-3 font-medium text-[16px]"
-              }`}
+          {data.map((data) => (
+            <LinkComponent
+              href={data.path}
+              icon={data.icon}
+              label={data.label}
+              buttonTag={data.buttonTag}
             >
-              <PiStackSimpleLight size={30} />
-              <span>HR Overview</span>
-            </div>
-          </Link>
-          <Link href={"/analytics"}>
-            <div className="text-[#8D9499] p-3 rounded-lg flex  items-center gap-3 font-medium text-[16px]">
-              <PiChartBarHorizontalLight size={30} />
-              <span>Analytics</span>
-            </div>
-          </Link>
-          <Link href={"/applications"}>
-            <div className="text-[#8D9499] p-3 rounded-lg flex  items-center gap-3 font-medium text-[16px]">
-              <PiFlagCheckeredLight size={30} />
-              <span>Applications</span>
-              <span className="rounded-full text-white bg-[#E21818] py-1 px-2 ">
-                New
-              </span>
-            </div>
-          </Link>
+              {data.label === "Applications" ? (
+                <span className="bg-red-500 py-1 px-2 rounded-lg text-white">
+                  New
+                </span>
+              ) : (
+                ""
+              )}
+            </LinkComponent>
+          ))}
 
           <div className=" flex items-center gap-3 p-3">
             <span className="bg-[#DEE5EA] w-6 h-6 rounded-full"></span>
@@ -72,7 +55,7 @@ export const Sidebar = ({ children }) => {
           </div>
         </div>
       </div>
-      <main className="w-full  ">{children}</main>
+      <main className="w-full">{children}</main>
     </div>
   );
 };
