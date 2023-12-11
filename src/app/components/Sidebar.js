@@ -15,6 +15,7 @@ export const Sidebar = ({ children }) => {
               icon={data.icon}
               label={data.label}
               buttonTag={data.buttonTag}
+              key={data.label}
             >
               {data.label === "Applications" ? (
                 <span className="bg-red-500 py-1 px-2 rounded-lg text-white">
