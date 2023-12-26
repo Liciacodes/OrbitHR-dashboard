@@ -1,12 +1,12 @@
-@tailwind base;
+@layer {
+  @tailwind base;
+}
 @tailwind components;
 @tailwind utilities;
 
-
-
 body {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-background-color: #EFF4F7
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #eff4f7;
 }

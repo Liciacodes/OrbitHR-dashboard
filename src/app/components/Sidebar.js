@@ -6,8 +6,8 @@ import LinkComponent from "./LinkComponent";
 
 export const Sidebar = ({ children }) => {
   return (
-    <div className="flex">
-      <div className="fixed h-screen py-12 px-4 border-r-1 flex flex-col justify-around">
+    <div className="flex ">
+      <div className="fixed h-screen py-12 px-4 border-r-1 lg:flex flex-col justify-around hidden">
         <div className="flex  flex-col flex-1">
           {data.map((data) => (
             <LinkComponent
@@ -22,7 +22,7 @@ export const Sidebar = ({ children }) => {
                   New
                 </span>
               ) : (
-                ""
+                "hidden"
               )}
             </LinkComponent>
           ))}
