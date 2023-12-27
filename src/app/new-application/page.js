@@ -45,7 +45,7 @@ export default function page() {
       <div className="flex w-full justify-around mt-8 h-screen">
         <div className="flex w-[60%] rounded-lg ">
           <ProgressBar progress={progress} />
-          <div className="flex flex-col px-4 w-full h-screen"></div>
+          {/* <div className="flex flex-col px-4 w-full h-screen"></div> */}
         </div>
         <div className=" w-[40%] border-l-2 border-[#EFF4F7] mx-8">
           <div className="w-[377px] h-[153px] bg-[#EFF4F7] rounded-xl mx-auto flex justify-center items-center leading-[14.52px]">

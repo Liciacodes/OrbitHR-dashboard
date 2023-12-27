@@ -14,8 +14,8 @@ const StepperComponent = () => {
     setToggle(!toggle);
   };
   return (
-    <div className=" w-full">
-      <Stepper active={active} onStepClick={setActive} orientation="vertical">
+    <div className="w-full">
+      <Stepper active={active} onStepClick={setActive}>
         <Stepper.Step
           label=" Basic Details"
           description="Enter a Job Title"
@@ -34,7 +34,6 @@ const StepperComponent = () => {
           <SetupApplication />
         </Stepper.Step>
       </Stepper>
-      <Button2 label={"Preview, the Publish"} className="bg-blue-700" />
     </div>
   );
 };

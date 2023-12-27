@@ -25,12 +25,12 @@ const SetupApplication = () => {
             <p className="text-[12px]">In Progress</p>
           </div>
         </div> */}
-        <div className="flex flex-col">
+        <div className="flex flex-col mt-8">
           <SetUpField
             icon={
               <RxLetterCaseCapitalize
                 size={25}
-                className="w-10 h-10 rounded-full bg-white text-[#8D9499] py-1 px-2"
+                className="w-10 h-10 rounded-full bg-white text-[#8D9499] py-1 px-2 mt-2"
               />
             }
             title={"First Name"}
@@ -40,7 +40,7 @@ const SetupApplication = () => {
             icon={
               <RxLetterCaseCapitalize
                 size={25}
-                className="w-10 h-10 rounded-full bg-white text-[#8D9499] py-1 px-2"
+                className="w-10 h-10 rounded-full bg-white text-[#8D9499] py-1 px-2 mt-2"
               />
             }
             title={"Email Address"}
@@ -50,7 +50,7 @@ const SetupApplication = () => {
             icon={
               <PiLinkSimpleBold
                 size={25}
-                className="w-10 h-10 rounded-full bg-white text-[#8D9499] py-1 px-2"
+                className="w-10 h-10 rounded-full bg-white text-[#8D9499] py-1 px-2 mt-2"
               />
             }
             title={"Link"}
@@ -58,7 +58,10 @@ const SetupApplication = () => {
           />
         </div>
       </div>
-      <Button2 label={"Preview, the Publish"} className="bg-blue-700" />
+      <Button2
+        label={"Preview, the Publish"}
+        className="bg-blue-700 mt-8 mb-12"
+      />
     </div>
   );
 };

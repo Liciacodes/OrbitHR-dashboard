@@ -12,7 +12,9 @@ const BasicDetails = () => {
   return (
     <div className="mt-[-10px] w-full">
       <div className="flex flex-col w-full">
-        <label className="text-[#8D9499] text-[14px]">Enter a Job Title</label>
+        <label className="text-[#8D9499] text-[14px] mt-4">
+          Enter a Job Title
+        </label>
         <input
           type="text"
           name="JobTitle"
@@ -20,7 +22,7 @@ const BasicDetails = () => {
         ></input>
       </div>
       <div>
-        <label className="text-[#8D9499]">Choose Employment Type</label>
+        <label className="text-[#8D9499] ">Choose Employment Type</label>
         <div className="flex w-full">
           <Button2 label={"Freelance"} />
           <Button2 label={"FullTime"} />
@@ -28,7 +30,7 @@ const BasicDetails = () => {
           <Button2 label={"Consultancy"} />
         </div>
       </div>
-      <div className="flex w-full items-center justify-between ">
+      <div className="flex w-full items-center justify-between mt-4">
         <div className="flex flex-col">
           <label className="text-[#8D9499] ">Country</label>
           <input
@@ -43,7 +45,7 @@ const BasicDetails = () => {
           <input type="text" className="border-b outline-none font-medium" />
         </div>
       </div>
-      <div className="flex items-center justify-between ">
+      <div className="flex items-center justify-between mt-4">
         <div>
           <ToggleSwitch
             isChecked={isChecked}
@@ -85,7 +87,7 @@ const BasicDetails = () => {
           />
         </div>
       </div>
-      <div className=" text-[#8D9499]">
+      <div className=" text-[#8D9499] mt-4">
         <span>Salary Range - USD</span>{" "}
         <span className=" ml-4 text-[14px] text-[#2194FF]">
           Change Currency
