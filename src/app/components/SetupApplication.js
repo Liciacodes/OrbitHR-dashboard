@@ -6,7 +6,7 @@ import Button2 from "../components/Button2";
 
 const SetupApplication = () => {
   return (
-    <div>
+    <div className="mt-[-30px] w-full">
       <div>
         {/* <div className="flex justify-between mb-4"></div> */}
         {/* <div className="flex justify-between">
@@ -25,7 +25,7 @@ const SetupApplication = () => {
             <p className="text-[12px]">In Progress</p>
           </div>
         </div> */}
-        <div className="flex flex-col mt-8">
+        <div className="flex flex-col mt-8 w-full">
           <SetUpField
             icon={
               <RxLetterCaseCapitalize

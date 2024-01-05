@@ -12,13 +12,13 @@ export const data = [
     icon: <PiStackSimpleLight size={30} />,
   },
   {
-    id: 0,
+    id: 1,
     label: "Analytics",
     path: "/analytics",
     icon: <PiChartBarHorizontalLight size={30} />,
   },
   {
-    id: 0,
+    id: 2,
     label: "Applications",
     path: "/",
     icon: <PiFlagCheckeredLight size={30} />,

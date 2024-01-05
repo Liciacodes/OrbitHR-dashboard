@@ -10,14 +10,16 @@ import { useState } from "react";
 import ToggleSwitch from "../components/ToggleSwitch";
 import LinkComponent from "../components/LinkComponent";
 import { RxLetterCaseCapitalize } from "react-icons/rx";
+import Stepper2 from "../components/Stepper2";
+import StepperComponent from "../components/Stepper";
 
 export default function page() {
   // const handleToggle = () => {
   //   setIsChecked(!isChecked);
   // };
-  const progress = 100;
+
   return (
-    <main className="flex flex-col ml-60 mr-8 mt-3 mb-4 bg-white h-[45rem] p-8 rounded-[15px] overflow-hidden">
+    <main className="flex flex-col ml-60 mr-8 mt-3 mb-4 bg-white h-[45rem] p-8 rounded-[15px] overflow-hidden ">
       <div className="flex justify-between items-center text-[16px] leading-5">
         <div>
           <span className="text-[#FF3434] font-medium ">Cancel</span>
@@ -43,9 +45,8 @@ export default function page() {
       </div>
 
       <div className="flex w-full justify-around mt-8 h-screen">
-        <div className="flex w-[60%] rounded-lg ">
-          <ProgressBar progress={progress} />
-          {/* <div className="flex flex-col px-4 w-full h-screen"></div> */}
+        <div className="flex w-[60%] rounded-lg h-screen">
+          <StepperComponent />
         </div>
         <div className=" w-[40%] border-l-2 border-[#EFF4F7] mx-8">
           <div className="w-[377px] h-[153px] bg-[#EFF4F7] rounded-xl mx-auto flex justify-center items-center leading-[14.52px]">

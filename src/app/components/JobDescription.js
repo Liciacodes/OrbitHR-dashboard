@@ -9,7 +9,7 @@ import { PiLinkSimpleBold } from "react-icons/pi";
 
 const JobDescription = () => {
   return (
-    <div>
+    <div className="mt-[-30px] w-full h-[700px]">
       <div>
         {/* <div className="flex items-center justify-between">
           <h1 className="text-black font-medium">Basic Details</h1>
@@ -27,7 +27,7 @@ const JobDescription = () => {
           </div>
         </div> */}
 
-        <p className="text-[#8D9499] text-[12px] w-[340px] ">
+        <p className="text-[#8D9499] text-[12px] w-[340px] mb-8">
           Create a detailed description of what would be required of the
           candidate. Read our
           <a className="text-black mx-1 font-medium">

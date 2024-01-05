@@ -14,23 +14,31 @@ const StepperComponent = () => {
     setToggle(!toggle);
   };
   return (
-    <div className="w-full">
-      <Stepper active={active} onStepClick={setActive}>
+    <div className="w-full h-screen ">
+      <Stepper
+        active={active}
+        onStepClick={setActive}
+        orientation="vertical"
+        className="flex gap-x-4 font-gradient-to-r from-blue-400 via-white to-gray-500"
+        size="sm"
+      >
         <Stepper.Step
-          label=" Basic Details"
-          description="Enter a Job Title"
-          className=""
+        // label=" Basic Details"
+        // description="Enter a Job Title"
         >
           <BasicDetails />
         </Stepper.Step>
         <Stepper.Step
-          label="Job Descriptions"
-          description="create a detailed description"
+        // label="Job Descriptions"
+        // description="create a detailed description"
         >
           <JobDescription />
         </Stepper.Step>
 
-        <Stepper.Step label=" Setup Application Forms " description="Lorem">
+        <Stepper.Step
+        // label=" Setup Application Forms"
+        // description="Lorem"
+        >
           <SetupApplication />
         </Stepper.Step>
       </Stepper>

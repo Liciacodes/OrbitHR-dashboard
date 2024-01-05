@@ -20,7 +20,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col items-center justify-end">
-          <div className="flex items-center gap-3">
+          <div className=" hidden lg:flex items-center gap-3">
             <p className="  text-[#8D9499]">See Drafts </p>
             <div>
               <PiNumberCircleEightFill
@@ -39,7 +39,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-3 mt-4 gap-4 grid-rows-1 grids">
+      <div className="grid lg:grid-cols-3 mt-4 gap-4 grid-rows-1 grids overflow-scroll lg:overflow-hidden max-h-full">
         {/* //First column */}
         <div className="col-span-1  w-full flex flex-col gap-y-2">
           <div className=" h-[85px] bg-[#EFF4F7] rounded-lg"></div>

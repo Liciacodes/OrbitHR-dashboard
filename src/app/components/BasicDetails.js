@@ -10,7 +10,8 @@ const BasicDetails = () => {
     setToggle(!toggle);
   };
   return (
-    <div className="mt-[-10px] w-full">
+    <div className=" w-full mt-[-30px]  h-[700px]">
+      <h3 className="text-[#2194FF] font-medium">Basic Details</h3>
       <div className="flex flex-col w-full">
         <label className="text-[#8D9499] text-[14px] mt-4">
           Enter a Job Title
