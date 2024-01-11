@@ -3,10 +3,11 @@ import SetUpField from "../components/SetUpField";
 import { RxLetterCaseCapitalize } from "react-icons/rx";
 import { PiLinkSimpleBold } from "react-icons/pi";
 import Button2 from "../components/Button2";
+import "./stepper.css";
 
 const SetupApplication = () => {
   return (
-    <div className="mt-[-30px] w-full">
+    <div className="mt-[-30px]  w-[530px]">
       <div>
         {/* <div className="flex justify-between mb-4"></div> */}
         {/* <div className="flex justify-between">

@@ -9,7 +9,7 @@ import { PiLinkSimpleBold } from "react-icons/pi";
 
 const JobDescription = () => {
   return (
-    <div className="mt-[-30px] w-full h-[700px]">
+    <div className="mt-[-30px] w-[530px] h-[700px]">
       <div>
         {/* <div className="flex items-center justify-between">
           <h1 className="text-black font-medium">Basic Details</h1>

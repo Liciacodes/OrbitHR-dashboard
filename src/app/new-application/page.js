@@ -25,7 +25,7 @@ export default function page() {
           <span className="text-[#FF3434] font-medium ">Cancel</span>
         </div>
 
-        <div className="flex gap-x-4 text-[16px]">
+        <div className="flex gap-x-4 text-[16px] px-4">
           <span className="text-black font-medium border-r-2 border-[#EFF4F7] px-2">
             Preview Only{" "}
           </span>
@@ -48,18 +48,18 @@ export default function page() {
         <div className="flex w-[60%] rounded-lg h-screen">
           <StepperComponent />
         </div>
-        <div className=" w-[40%] border-l-2 border-[#EFF4F7] mx-8">
-          <div className="w-[377px] h-[153px] bg-[#EFF4F7] rounded-xl mx-auto flex justify-center items-center leading-[14.52px]">
+        <div className=" w-[40%] border-l-2 border-[#EFF4F7] ">
+          <div className="w-[440px] h-[153px] bg-[#EFF4F7] rounded-xl mx-8 flex justify-center items-center leading-[14.52px]">
             <p className="m-auto ">AD for the New Generate with AI Feature</p>
           </div>
-          <div className="mx-10 mt-4">
+          <div className="mx-8 mt-4">
             <h1 className="font-medium text-[20px] ">Form Editor Box</h1>
             <p className="text-[#8D9499]">
               Everything you need to setup an application form for your
               candidates.
             </p>
           </div>
-          <div className="flex flex-col mx-10">
+          <div className="flex flex-col mx-8">
             <EditFields
               icon={
                 <RxLetterCaseCapitalize
