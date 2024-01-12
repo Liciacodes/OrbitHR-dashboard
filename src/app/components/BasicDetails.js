@@ -2,6 +2,78 @@ import React, { useState } from "react";
 import Button2 from "./Button2";
 import ToggleSwitch from "./ToggleSwitch";
 import TextField from "@mui/material/TextField";
+import { outlinedInputClasses } from "@mui/material/OutlinedInput";
+import { createTheme, ThemeProvider, useTheme } from "@mui/material/styles";
+import FilledInput from "@mui/material/FilledInput";
+
+// const customTheme = (outerTheme) =>
+//   createTheme({
+//     palette: {
+//       mode: outerTheme.palette.mode,
+//     },
+//     components: {
+//       MuiTextField: {
+//         styleOverrides: {
+//           root: {
+//             "--TextField-brandBorderColor": "#E0E3E7",
+//             "--TextField-brandBorderHoverColor": "#B2BAC2",
+//             "--TextField-brandBorderFocusedColor": "##F8FBFF",
+//             "--TextField-brandFocusedColor": "red",
+//             "& label.Mui-focused": {
+//               color: "var(--TextField-brandBorderFocusedColor)",
+//             },
+//           },
+//         },
+//       },
+//       MuiOutlinedInput: {
+//         styleOverrides: {
+//           notchedOutline: {
+//             borderColor: "var(--TextField-brandBorderColor)",
+//           },
+//           root: {
+//             [`&:hover .${outlinedInputClasses.notchedOutline}`]: {
+//               borderColor: "var(--TextField-brandBorderHoverColor)",
+//             },
+//             [`&.Mui-focused .${outlinedInputClasses.notchedOutline}`]: {
+//               focusColor: "var(--TextField-brandFocusedColor)",
+//             },
+//           },
+//         },
+//       },
+//       MuiFilledInput: {
+//         styleOverrides: {
+//           root: {
+//             "&::before, &::after": {
+//               borderBottom: "2px solid var(--TextField-brandBorderColor)",
+//             },
+//             "&:hover:not(.Mui-disabled, .Mui-error):before": {
+//               borderBottom: "2px solid var(--TextField-brandBorderHoverColor)",
+//             },
+//             "&.Mui-focused:after": {
+//               borderBottom:
+//                 "2px solid var(--TextField-brandBorderFocusedColor)",
+//             },
+//           },
+//         },
+//       },
+//       MuiInput: {
+//         styleOverrides: {
+//           root: {
+//             "&::before": {
+//               borderBottom: "2px solid var(--TextField-brandBorderColor)",
+//             },
+//             "&:hover:not(.Mui-disabled, .Mui-error):before": {
+//               borderBottom: "2px solid var(--TextField-brandBorderHoverColor)",
+//             },
+//             "&.Mui-focused:after": {
+//               borderBottom:
+//                 "2px solid var(--TextField-brandBorderFocusedColor)",
+//             },
+//           },
+//         },
+//       },
+//     },
+//   });
 
 const BasicDetails = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -10,11 +82,14 @@ const BasicDetails = () => {
   const handleToggle = () => {
     setToggle(!toggle);
   };
+
   return (
-    <div className=" w-[530px] mt-[-30px]  h-[700px]">
-      <h3 className="text-[#2194FF] font-medium">Basic Details</h3>
+    <div className=" w-[540px] mt-[-30px]  h-[700px]">
+      <h3 className="text-[#2194FF]  leading-[19.36px] font-medium text-[1rem]">
+        Basic Details
+      </h3>
       <div className="flex flex-col w-full">
-        <label className="text-[#8D9499] text-[14px] mt-4">
+        <label className="text-[#8D9499] text-[14px] mt-2 font-normal leading-[16.94px]">
           Enter a Job Title
         </label>
         <input
@@ -25,7 +100,9 @@ const BasicDetails = () => {
         ></input>
       </div>
       <div className="w-full">
-        <label className="text-[#8D9499] ">Choose Employment Type</label>
+        <label className="text-[#8D9499]  text-[14px] font-normal leading-[16.94px]">
+          Choose Employment Type
+        </label>
         <div className="flex gap-x-2">
           <Button2 label={"Freelance"} />
           <Button2 label={"FullTime"} />
@@ -33,27 +110,51 @@ const BasicDetails = () => {
           <Button2 label={"Consultancy"} />
         </div>
       </div>
-      <div className="flex w-full items-stretch justify-between mt-6">
-        <div className="flex flex-col">
-          <TextField
-            id="filled-basic"
-            label="Country"
-            variant="filled"
-            className="text-green-500 outline-none font-medium focus:bg-[#F8FBFF] py-[0.5rem]"
-          />
-        </div>
-        <div className="flex flex-col ml-8">
-          <TextField
-            id="filled-basic"
-            label="City"
-            variant="filled"
-             inputProps={{style: {  backgroundColor: "red" }}
-           
-   // className="border-b border-red-500 outline-none font-medium focus:bg-[#F8FBFF] py-[0.5rem]  text-lg"
- />
-        </div>
+      <div className="flex w-full items-stretch justify-between mt-6 ">
+        <TextField
+          id="filled-basic"
+          label="Country"
+          variant="standard"
+          InputLabelProps={{
+            style: {
+              color: "#8D9499",
+              width: "160%",
+              paddingLeft: "8px",
+              paddingTop: "4px",
+            },
+          }}
+          required
+          sx={{
+            ".Mui-focused": {
+              backgroundColor: "#F8FBFF",
+            },
+          }}
+          size="small"
+        />
+
+        <TextField
+          id="filled-basic"
+          label="City"
+          variant="standard"
+          autoFocus
+          InputLabelProps={{
+            style: {
+              color: "#8D9499",
+              width: "160%",
+              paddingLeft: "8px",
+              paddingTop: "4px",
+            },
+          }}
+          required
+          size="small"
+          sx={{
+            ".Mui-focused": {
+              backgroundColor: "#F8FBFF",
+            },
+          }}
+        />
       </div>
-      <div className="flex  items-stretch justify-between mt-4">
+      <div className="flex w-full items-stretch justify-between mt-6 gap-y-4">
         <div>
           <ToggleSwitch
             isChecked={isChecked}
@@ -76,8 +177,7 @@ const BasicDetails = () => {
             label={"Onsite"}
           />
         </div>
-        <div>
-          {" "}
+        <div className="mr-20">
           <ToggleSwitch
             isChecked={isChecked}
             onChange={handleToggle}
@@ -95,9 +195,11 @@ const BasicDetails = () => {
           />
         </div>
       </div>
-      <div className=" text-[#8D9499] mt-4">
-        <span>Salary Range - USD</span>{" "}
-        <span className=" ml-4 text-[14px] text-[#2194FF]">
+      <div className=" text-[#8D9499] mt-6">
+        <span className="text-[14px]  font-normal leading-[16.94px]">
+          Salary Range - USD
+        </span>{" "}
+        <span className=" ml-4 text-[14px] text-[#2194FF]  font-normal leading-[16.94px]">
           Change Currency
         </span>
         <input

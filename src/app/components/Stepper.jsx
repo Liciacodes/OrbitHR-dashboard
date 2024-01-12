@@ -19,7 +19,7 @@ const StepperComponent = () => {
         active={active}
         onStepClick={setActive}
         orientation="vertical"
-        className="flex gap-x-4 font-gradient-to-r from-blue-400 via-white to-gray-500"
+        className="flex gap-x-4 text-gradient-to-r from-blue-400 via-white to-gray-500"
         size="sm"
       >
         <Stepper.Step

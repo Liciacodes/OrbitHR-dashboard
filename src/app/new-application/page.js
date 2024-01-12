@@ -40,8 +40,10 @@ export default function page() {
         </div>
       </div>
       <div className="mt-6">
-        <p className="text-[20px] font-medium">Create a New Job.</p>
-        <p className="text-[#8D9499]">Don't worry, your work autosaves!</p>
+        <p className="text-[20px] font-medium leading-6">Create a New Job.</p>
+        <p className="text-[#8D9499] leading-4 font-normal mt-2">
+          Don't worry, your work autosaves!
+        </p>
       </div>
 
       <div className="flex w-full justify-around mt-8 h-screen">
