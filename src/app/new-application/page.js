@@ -14,10 +14,6 @@ import Stepper2 from "../components/Stepper2";
 import StepperComponent from "../components/Stepper";
 
 export default function page() {
-  // const handleToggle = () => {
-  //   setIsChecked(!isChecked);
-  // };
-
   return (
     <main className="flex flex-col ml-60 mr-8 mt-3 mb-4 bg-white h-[45rem] p-8 rounded-[15px] overflow-hidden ">
       <div className="flex justify-between items-center text-[16px] leading-5">
@@ -40,7 +36,7 @@ export default function page() {
         </div>
       </div>
       <div className="mt-6">
-        <p className="text-[20px] font-medium leading-6">Create a New Job.</p>
+        <p className="text-[20px] font-semibold leading-6">Create a New Job.</p>
         <p className="text-[#8D9499] leading-4 font-normal mt-2">
           Don't worry, your work autosaves!
         </p>
@@ -100,7 +96,9 @@ export default function page() {
               size={20}
               className="text-{#2194FF]"
             />
-            <span>Request New Entries</span>
+            <span className="font-semibold text-[12px]">
+              Request New Entries
+            </span>
           </div>
         </div>
       </div>

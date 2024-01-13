@@ -1,16 +1,31 @@
-import { Switch } from "@mantine/core";
+import { Switch, FormControlLabel } from "@mui/material";
 function ToggleSwitch({ label }) {
   return (
-    <div className="my-2">
-      <Switch
+    <div className="text-[#8D9499]">
+      <FormControlLabel
+        control={<Switch defaultChecked color="default" />}
         label={label}
-        className="text-[#8D9499] text-[14px]  font-normal leading-[16.94px]"
       />
     </div>
   );
 }
 
 export default ToggleSwitch;
+
+{
+  {
+    /* <Switch
+        label={label}
+        className="text-[#8D9499] text-[14px]  font-normal leading-[16.94px]"
+        size="small"
+      /> */
+  }
+  /* <FormGroup>
+  <FormControlLabel control={<Switch defaultChecked />} label="Label" />
+  <FormControlLabel required control={<Switch />} label="Required" />
+  <FormControlLabel disabled control={<Switch />} label="Disabled" />
+</FormGroup>; */
+}
 
 // components/ToggleSwitch.js
 // import React from "react";

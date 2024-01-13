@@ -8,7 +8,7 @@ export const data = [
   {
     id: 0,
     label: "Hr Overview",
-    path: "/overview",
+    path: "/",
     icon: <PiStackSimpleLight size={30} />,
   },
   {
@@ -20,7 +20,7 @@ export const data = [
   {
     id: 2,
     label: "Applications",
-    path: "/",
+    path: "/new-application",
     icon: <PiFlagCheckeredLight size={30} />,
     buttonTag: "New",
   },

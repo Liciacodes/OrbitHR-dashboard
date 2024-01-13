@@ -19,15 +19,17 @@ const JobDescription = () => {
           </div>
         </div>
         <div className="flex justify-between mt-4">
-          <h1 className="text-[#2194FF] font-medium">Job Description</h1>
+          <h1 className="text-[#2194FF] font-medium  leading-[19.36px] font-medium text-[1rem]">Job Description</h1>
 
           <div className="flex items-center gap-x-1">
             <PiTimerBold size={20} color="#F69A0F" />
             <p className="text-[12px]">In Progress</p>
           </div>
         </div> */}
-
-        <p className="text-[#8D9499] text-[12px] w-[340px] mb-8">
+        <h1 className="text-[#2194FF] leading-[19.36px] font-semibold text-[1rem] mb-2">
+          Job Description
+        </h1>
+        <p className="text-[#8D9499] text-[12px] w-[340px] mb-8 font-semibold leading-[1rem] ">
           Create a detailed description of what would be required of the
           candidate. Read our
           <a className="text-black mx-1 font-medium">
@@ -35,16 +37,18 @@ const JobDescription = () => {
           </a>
         </p>
 
-        <div className="w-full h-[320px]  bg-[#F9FDFF] "></div>
-        <div className="bg-white flex justify-between border-[#EFF4F7]">
-          <div className="flex items-center gap-x-6  border-2 border-[#EFF4F7] p-2">
-            <IoTextOutline color="#8D9499" size={25} />
-            <PiTextB color="#8D9499" size={25} />
-            <CiTextAlignRight color="#8D9499" size={25} />
-          </div>
-          <div className="flex items-center gap-x-2 border-2 border-[#EFF4F7] p-2">
-            <PiSparkleFill color="#F845D0" size={25} />
-            <p className="text-black font-medium">Generate with AI</p>
+        <div className=" w-[530px] h-[330px] rounded-md border-2 border-[#EFF4F7]">
+          <textarea className="w-full h-[270px] outline-none bg-[#F9FDFF] text-lg p-4"></textarea>
+          <div className="flex h-[60px] mt-[-9px]">
+            <div className="flex items-center justify-start gap-x-6  border border-[#EFF4F7] px-2 w-[290px]">
+              <IoTextOutline color="#8D9499" size={25} />
+              <PiTextB color="#8D9499" size={25} />
+              <CiTextAlignRight color="#8D9499" size={25} />
+            </div>
+            <div className="flex items-center justify-center gap-x-2  px-2 w-[340px]  border border-[#EFF4F7] ">
+              <PiSparkleFill color="#F845D0" size={25} />
+              <p className="text-black font-semibold">Generate with AI</p>
+            </div>
           </div>
         </div>
       </div>

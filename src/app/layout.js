@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
       <head>
         <ColorSchemeScript />
       </head>
-      <body>
+      <body className="bg-[#eff4f7]">
         {/* <div className="lg:hidden">
           <FiMenu size={40} color="red" />
         </div> */}
