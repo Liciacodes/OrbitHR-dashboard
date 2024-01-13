@@ -65,7 +65,7 @@ export default function Home() {
           {/* //Second Column */}
           <div className="flex items-center justify-between mt-6">
             <div className="flex gap-x-2 items-center">
-              <span className="bg-[#DEE5EA] w-10 h-10 rounded-full mt-3"></span>
+              <span className="bg-[#DEE5EA] w-10 h-8 rounded-full mt-3"></span>
               <div className="w-full flex flex-col">
                 <span className="bg-[#DEE5EA] w-16 h-3 rounded-full mb-2"></span>
                 <span className="bg-[#DEE5EA] w-32 h-3 rounded-full"></span>
@@ -75,13 +75,13 @@ export default function Home() {
             <span className="bg-[#DEE5EA] w-16 h-6 rounded-full mt-3"></span>
           </div>
           {/* //Profile div */}
-          <div className="flex items-center justify-between">
-            <div className="flex gap-x-2 items-center">
-              <span className="w-10 h-10 rounded-full mt-3">
+          <div className="flex items-center justify-between  mt-2">
+            <div className="flex gap-x-2 items-center gap-2">
+              <span className="w-8 h-8 rounded-full mt-3">
                 <Image
                   src={profile}
-                  width={40}
-                  height={60}
+                  width={60}
+                  height={40}
                   layout="responsive"
                   className="rounded-full"
                 ></Image>
@@ -100,9 +100,9 @@ export default function Home() {
               <span className="text-black font-bold">View</span>
             </div>
           </div>
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between mt-2">
             <div className="flex gap-x-2 items-center">
-              <span className="bg-[#DEE5EA] w-10 h-10 rounded-full mt-3"></span>
+              <span className="bg-[#DEE5EA] w-10 h-8 rounded-full mt-3"></span>
               <div className="w-full flex flex-col">
                 <span className="bg-[#DEE5EA] w-16 h-3 rounded-full mb-2"></span>
                 <span className="bg-[#DEE5EA] w-32 h-3 rounded-full"></span>
@@ -111,9 +111,9 @@ export default function Home() {
 
             <span className="bg-[#DEE5EA] w-16 h-6 rounded-full mt-3 gap-y-6"></span>
           </div>
-          <div className="flex items-center justify-between ">
+          <div className="flex items-center justify-between mt-2">
             <div className="flex gap-x-2 items-center">
-              <span className="bg-[#DEE5EA] w-10 h-10 rounded-full mt-3"></span>
+              <span className="bg-[#DEE5EA] w-10 h-8 rounded-full mt-3"></span>
               <div className="w-full flex flex-col">
                 <span className="bg-[#DEE5EA] w-16 h-3 rounded-full mb-2"></span>
                 <span className="bg-[#DEE5EA] w-32 h-3 rounded-full"></span>
@@ -122,9 +122,9 @@ export default function Home() {
 
             <span className="bg-[#DEE5EA] w-16 h-6 rounded-full mt-3"></span>
           </div>
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between mt-2">
             <div className="flex gap-x-2 items-center">
-              <span className="bg-[#DEE5EA] w-10 h-10 rounded-full mt-3"></span>
+              <span className="bg-[#DEE5EA] w-10 h-8 rounded-full mt-3"></span>
               <div className="w-full flex flex-col">
                 <span className="bg-[#DEE5EA] w-16 h-3 rounded-full mb-2"></span>
                 <span className="bg-[#DEE5EA] w-32 h-3 rounded-full"></span>
@@ -133,9 +133,9 @@ export default function Home() {
 
             <span className="bg-[#DEE5EA] w-16 h-6 rounded-full mt-3"></span>
           </div>
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between mt-2">
             <div className="flex gap-x-2 items-center">
-              <span className="bg-[#DEE5EA] w-10 h-10 rounded-full mt-3"></span>
+              <span className="bg-[#DEE5EA] w-10 h-8 rounded-full mt-3"></span>
               <div className="w-full flex flex-col">
                 <span className="bg-[#DEE5EA] w-16 h-3 rounded-full mb-2"></span>
                 <span className="bg-[#DEE5EA] w-32 h-3 rounded-full"></span>

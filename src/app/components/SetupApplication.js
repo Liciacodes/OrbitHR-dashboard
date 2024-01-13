@@ -44,7 +44,7 @@ const SetupApplication = () => {
             icon={
               <PiLinkSimpleBold
                 size={25}
-                className="w-10 h-10 rounded-full bg-white text-[#8D9499] py-1 px-2 mt-2"
+                className="w-10 h-10 rounded-full bg-white text-[#000000] py-1 px-2 mt-2"
               />
             }
             title={"Link"}

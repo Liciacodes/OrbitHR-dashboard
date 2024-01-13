@@ -18,18 +18,20 @@ export default function page() {
     <main className="flex flex-col ml-60 mr-8 mt-3 mb-4 bg-white h-[45rem] p-8 rounded-[15px] overflow-hidden ">
       <div className="flex justify-between items-center text-[16px] leading-5">
         <div>
-          <span className="text-[#FF3434] font-medium ">Cancel</span>
+          <span className="text-[#FF3434] font-semibold leading-[19.36px]">
+            Cancel
+          </span>
         </div>
 
         <div className="flex gap-x-4 text-[16px] px-4">
-          <span className="text-black font-medium border-r-2 border-[#EFF4F7] px-2">
+          <span className="text-black font-semibold border-r-2 border-[#EFF4F7] px-2">
             Preview Only{" "}
           </span>
-          <span className="text-black font-medium border-r-2 border-[#EFF4F7] px-2">
+          <span className="text-black font-semibold border-r-2 border-[#EFF4F7] px-2">
             {" "}
             Save as Draft{" "}
           </span>
-          <span className="text-[#8D9499] font-medium flex">
+          <span className="text-[#8D9499] font-semibold flex">
             <BsStars size={20} />
             Preview, then Publish
           </span>
@@ -48,11 +50,16 @@ export default function page() {
         </div>
         <div className=" w-[40%] border-l-2 border-[#EFF4F7] ">
           <div className="w-[440px] h-[153px] bg-[#EFF4F7] rounded-xl mx-8 flex justify-center items-center leading-[14.52px]">
-            <p className="m-auto ">AD for the New Generate with AI Feature</p>
+            <p className="opacity-[40%] text-[0.9rem] leading-[14.52px]  text-center ">
+              AD for the New Generate <br />
+              with AI Feature
+            </p>
           </div>
-          <div className="mx-8 mt-4">
-            <h1 className="font-medium text-[20px] ">Form Editor Box</h1>
-            <p className="text-[#8D9499]">
+          <div className="mx-8 mt-4 w-[300px]">
+            <h1 className="font-semibold text-[16px] leading-[19.36px]">
+              Form Editor Box
+            </h1>
+            <p className="text-[#8D9499] text-[14px] leading-[20px] mt-2 font-medium">
               Everything you need to setup an application form for your
               candidates.
             </p>
@@ -62,7 +69,7 @@ export default function page() {
               icon={
                 <RxLetterCaseCapitalize
                   size={25}
-                  className="w-10 h-10 rounded-full bg-[#EFF4F7] text-[#8D9499] py-1 px-2"
+                  className="w-10 h-10 rounded-full bg-[#EFF4F7] text-[#000000] py-1 px-2"
                 />
               }
               title={"Text Field"}
@@ -72,7 +79,8 @@ export default function page() {
               icon={
                 <PiLinkSimpleBold
                   size={25}
-                  className="w-10 h-10 rounded-full bg-[#EFF4F7] text-[#8D9499] py-1 px-2"
+                  color="black"
+                  className="w-10 h-10 rounded-full bg-[#EFF4F7]  text-[#000000] py-1 px-2"
                 />
               }
               title={"Link"}
@@ -81,8 +89,8 @@ export default function page() {
             <EditFields
               icon={
                 <PiFilePdfLight
-                  size={25}
-                  className="w-10 h-10 rounded-full bg-[#EFF4F7] text-[#8D9499] py-1 px-2"
+                  size={30}
+                  className="w-10 h-10 rounded-full bg-[#EFF4F7] text-[#000000] py-1 px-2"
                 />
               }
               title={"Upload Document"}
@@ -90,13 +98,13 @@ export default function page() {
             />
           </div>
 
-          <div className="flex mx-8 items-center gap-x-2">
+          <div className="flex mx-8 items-center gap-x-2 mt-4">
             <GrCircleQuestion
               color="blue"
               size={20}
               className="text-{#2194FF]"
             />
-            <span className="font-semibold text-[12px]">
+            <span className="font-semibold text-[12px] ">
               Request New Entries
             </span>
           </div>
