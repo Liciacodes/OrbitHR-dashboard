@@ -6,9 +6,9 @@ import LinkComponent from "./LinkComponent";
 
 export const Sidebar = ({ children }) => {
   return (
-    <div className="flex ">
-      <div className="fixed h-screen py-12 px-4 border-r-1 lg:flex flex-col justify-around ">
-        <div className="flex  flex-col flex-1">
+    <div className="flex">
+      <div className="hidden w-full p-8 md:p-0 md:w-[15%] md:flex flex-col justify-between">
+        <div className="flex flex-col  mt-28">
           {data.map((data) => (
             <LinkComponent
               href={data.path}
@@ -17,26 +17,22 @@ export const Sidebar = ({ children }) => {
               buttonTag={data.buttonTag}
               key={data.label}
             >
-              {data.label === "Applications" ? (
-                <span className="bg-red-500 py-1 px-2 rounded-lg text-white">
-                  New
-                </span>
-              ) : (
-                "hidden"
-              )}
+              {/* {data.label === "Applications" && (
+                <span className="bg-red-500  rounded-lg text-white">New</span>
+              )} */}
             </LinkComponent>
           ))}
 
-          <div className=" flex items-center gap-3 p-3">
+          <div className=" flex items-center gap-x-2 px-5 py-1 mt-1">
             <span className="bg-[#DEE5EA] w-6 h-6 rounded-full"></span>
-            <span className=" bg-[#DEE5EA] w-24 h-4 rounded-md"></span>
+            <span className=" bg-[#DEE5EA] w-24 h-3 rounded-md"></span>
           </div>
-          <div className=" flex items-center gap-3 p-3">
+          <div className=" flex items-center gap-x-2 px-5  py-1 mt-3">
             <span className="bg-[#DEE5EA] w-6 h-6 rounded-full"></span>
-            <span className=" bg-[#DEE5EA] w-16 h-4 rounded-md"></span>
+            <span className=" bg-[#DEE5EA] w-16 h-3 rounded-md"></span>
           </div>
         </div>
-        <div className="flex flex-col text-[#8D9499] ">
+        <div className="flex flex-col text-[#8D9499] px-5 mb-3">
           <div className="flex items-center ">
             <RiMicLine size={25} />
             <span className="ml-1">Orbit HR</span>
@@ -56,7 +52,8 @@ export const Sidebar = ({ children }) => {
           </div>
         </div>
       </div>
-      <main className="w-full">{children}</main>
+
+      <div className="sm:w-[82%] w-full">{children}</div>
     </div>
   );
 };

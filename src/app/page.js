@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex flex-col ml-[14.3rem] mr-8 mt-3 mb-4 bg-white h-[45rem] p-8 rounded-[15px] overflow-hidden ">
+    <main className="flex flex-col my-2 bg-white sm:h-[97vh] h-full w-full  p-4 rounded-[16px] sm:overflow-hidden overflow-scroll ">
       <div className="flex  justify-between w-full ">
         <div className="flex flex-col ">
           <span className=" bg-[#DEE5EA] w-56 h-8 rounded-full mb-2"></span>
@@ -39,7 +39,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-3 mt-4 gap-4 grid-rows-1 grids overflow-scroll lg:overflow-hidden max-h-full">
+      <div className="grid lg:grid-cols-3 mt-4 gap-4 grid-rows-1 grids overflow-scroll sm:overflow-hidden max-h-full">
         {/* //First column */}
         <div className="col-span-1  w-full flex flex-col gap-y-2">
           <div className=" h-[85px] bg-[#EFF4F7] rounded-lg"></div>

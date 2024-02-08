@@ -10,7 +10,7 @@ import ToggleSwitch from "./ToggleSwitch";
 
 const SetupApplication = () => {
   return (
-    <div className="mt-[-30px]  w-[600px]">
+    <div className="sm:mt-[-30px] mt-0  sm:w-[600px] w-full">
       <div>
         <h1 className="text-black  font-semibold leading-[19.36px] text-[1rem] ">
           Set Application Form

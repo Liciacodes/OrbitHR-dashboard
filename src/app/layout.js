@@ -1,6 +1,5 @@
 import "@mantine/core/styles.css";
 import "./globals.css";
-import { FiMenu } from "react-icons/fi";
 import { Sidebar } from "./components/Sidebar";
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import Head from "next/head";
@@ -24,14 +23,10 @@ export default function RootLayout({ children }) {
       <head>
         <ColorSchemeScript />
       </head>
-      <body className="bg-[#eff4f7]">
-        {/* <div className="lg:hidden">
-          <FiMenu size={40} color="red" />
-        </div> */}
-
-        <Sidebar>
-          <MantineProvider>{children}</MantineProvider>
-        </Sidebar>
+      <body className="bg-[#eff4f7] h-screen w-screen">
+        <MantineProvider>
+          <Sidebar>{children}</Sidebar>
+        </MantineProvider>
       </body>
     </html>
   );

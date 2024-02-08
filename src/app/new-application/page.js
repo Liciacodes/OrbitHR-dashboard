@@ -10,26 +10,24 @@ import { useState } from "react";
 import ToggleSwitch from "../components/ToggleSwitch";
 import LinkComponent from "../components/LinkComponent";
 import { RxLetterCaseCapitalize } from "react-icons/rx";
-import Stepper2 from "../components/Stepper2";
 import StepperComponent from "../components/Stepper";
 
 export default function page() {
   return (
-    <main className="flex flex-col ml-60 mr-8 mt-3 mb-4 bg-white h-[45rem] p-8 rounded-[15px] overflow-hidden ">
-      <div className="flex justify-between items-center text-[16px] leading-5">
+    <main className="flex sm:flex-col  my-2  bg-white sm:h-[97vh] h-full w-full  p-4 rounded-[16px] sm:overflow-hidden overflow-scroll">
+      <div className="hidden md:flex justify-between items-center text-[16px] leading-5">
         <div>
           <span className="text-[#FF3434] font-semibold leading-[19.36px]">
             Cancel
           </span>
         </div>
 
-        <div className="flex gap-x-4 text-[16px] px-4">
-          <span className="text-black font-semibold border-r-2 border-[#EFF4F7] px-2">
-            Preview Only{" "}
+        <div className="flex gap-x-4 text-[16px] px-12">
+          <span className="text-black font-semibold border-r-2 border-[#EFF4F7] px-1">
+            Preview Only
           </span>
           <span className="text-black font-semibold border-r-2 border-[#EFF4F7] px-2">
-            {" "}
-            Save as Draft{" "}
+            Save as Draft
           </span>
           <span className="text-[#8D9499] font-semibold flex">
             <BsStars size={20} />
@@ -37,18 +35,18 @@ export default function page() {
           </span>
         </div>
       </div>
-      <div className="mt-6">
+      <div className="mt-6 hidden md:block">
         <p className="text-[20px] font-semibold leading-6">Create a New Job.</p>
         <p className="text-[#8D9499] leading-4 font-normal mt-2">
           Don't worry, your work autosaves!
         </p>
       </div>
 
-      <div className="flex w-full justify-around mt-8 h-screen">
-        <div className="flex w-[60%] rounded-lg h-screen">
+      <div className="flex flex-col sm:flex-row w-full justify-around mt-8 h-screen">
+        <div className="flex w-full sm:w-[60%] rounded-lg h-screen">
           <StepperComponent />
         </div>
-        <div className=" w-[40%] border-l-2 border-[#EFF4F7] ">
+        <div className="w-full sm:w-[40%] border-l-2 border-[#EFF4F7] overflow-scroll sm:overflow-hidden ">
           <div className="w-[440px] h-[153px] bg-[#EFF4F7] rounded-xl mx-8 flex justify-center items-center leading-[14.52px]">
             <p className="opacity-[40%] text-[0.9rem] leading-[14.52px]  text-center ">
               AD for the New Generate <br />

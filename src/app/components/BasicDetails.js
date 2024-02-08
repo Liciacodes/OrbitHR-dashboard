@@ -12,7 +12,7 @@ const BasicDetails = () => {
   };
 
   return (
-    <div className=" w-[540px] mt-[-30px]  h-[700px]">
+    <div className=" sm:w-[540px] w-full sm:mt-[-30px] mt-0  sm:h-[700px] h-full">
       <h3 className="text-[#2194FF] leading-[19.36px] font-semibold text-[1rem]">
         Basic Details
       </h3>
