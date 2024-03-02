@@ -10,7 +10,7 @@ const LinkComponent = ({ href, icon, label, buttonTag, disabled }) => {
     return (
       <span className="text-gray-400 cursor-not-allowed flex font-bold items-center py-2 px-5">
         <span>{icon}</span>
-        <span>{label}</span>
+        <span className="ml-2">{label}</span>
       </span>
     );
   }
@@ -21,7 +21,7 @@ const LinkComponent = ({ href, icon, label, buttonTag, disabled }) => {
           pathname === href
             ? "text-black border-r-2 border-[#2194FF] "
             : "text-[#8D9499]"
-        }  flex items-center font-bold text-[16px] py-2 px-5`}
+        }  flex items-center font-bold text-[17px] py-2 px-5`}
       >
         {icon && icon}
         <span className="mx-2 ">{label && label}</span>
