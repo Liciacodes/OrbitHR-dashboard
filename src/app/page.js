@@ -9,7 +9,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="flex flex-col my-2 bg-white sm:h-[97vh] h-full w-full  p-4 rounded-[16px] sm:overflow-hidden overflow-scroll ">
-      <div className="flex  justify-between w-full ">
+      <div className="flex  justify-between w-full mb-4 ">
         <div className="flex flex-col ">
           <span className=" bg-[#DEE5EA] w-56 h-8 rounded-full mb-2"></span>
           <span className=" bg-[#DEE5EA] w-40 h-3 rounded-lg mt-2"></span>

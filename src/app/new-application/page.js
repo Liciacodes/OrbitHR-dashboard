@@ -23,7 +23,7 @@ export default function page() {
         </div>
 
         <div className="flex gap-x-4 text-[16px] px-12">
-          <span className="text-black font-semibold border-r-2 border-[#EFF4F7] px-1">
+          <span className="text-black font-semibold border-r-2 border-[#EFF4F7] px-2">
             Preview Only
           </span>
           <span className="text-black font-semibold border-r-2 border-[#EFF4F7] px-2">
