@@ -16,6 +16,7 @@ export const Sidebar = ({ children }) => {
               label={data.label}
               buttonTag={data.buttonTag}
               key={data.label}
+              disabled={data.disabled}
             >
               {/* {data.label === "Applications" && (
                 <span className="bg-red-500  rounded-lg text-white">New</span>

@@ -53,7 +53,7 @@ export default function page() {
               with AI Feature
             </p>
           </div>
-          <div className="mx-8 mt-4 w-[300px]">
+          <div className="mx-8 mt-6 ">
             <h1 className="font-semibold text-[16px] leading-[19.36px]">
               Form Editor Box
             </h1>
@@ -62,7 +62,7 @@ export default function page() {
               candidates.
             </p>
           </div>
-          <div className="flex flex-col mx-8">
+          <div className="flex flex-col mx-8 mt-4">
             <EditFields
               icon={
                 <RxLetterCaseCapitalize
@@ -96,7 +96,7 @@ export default function page() {
             />
           </div>
 
-          <div className="flex mx-8 items-center gap-x-2 mt-4">
+          <div className="flex mx-8 items-center gap-x-2 mt-5">
             <GrCircleQuestion
               color="blue"
               size={20}

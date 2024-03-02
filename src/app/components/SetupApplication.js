@@ -27,6 +27,7 @@ const SetupApplication = () => {
             title={"First Name"}
             description={"Text Field"}
             required={"Marked as Required"}
+            bgcolor={"[#EFF4F7]"}
           />
           <SetUpField
             icon={
@@ -39,17 +40,19 @@ const SetupApplication = () => {
             title={"Email Address"}
             description={"Text Field"}
             required={"Marked as Required"}
+            bgcolor={"[#EFF4F7]"}
           />
           <SetUpField
             icon={
               <PiLinkSimpleBold
                 size={25}
-                className="w-10 h-10 rounded-full bg-white text-[#000000] py-1 px-2 mt-2"
+                className="w-10 h-10 rounded-full bg-[#EFF4F7]  text-[#000000] py-1 px-2 mt-2"
               />
             }
             title={"Link"}
             description={""}
             description2={"Allow users paste a link"}
+            bgcolor={"[#000000]"}
           />
         </div>
       </div>

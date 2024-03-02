@@ -10,12 +10,14 @@ export const data = [
     label: "Hr Overview",
     path: "/",
     icon: <PiStackSimpleLight size={30} />,
+    disabled: false,
   },
   {
     id: 1,
     label: "Analytics",
-    path: "/analytics",
+    path: "analytics",
     icon: <PiChartBarHorizontalLight size={30} />,
+    disabled: true,
   },
   {
     id: 2,
@@ -23,5 +25,6 @@ export const data = [
     path: "/new-application",
     icon: <PiFlagCheckeredLight size={30} />,
     buttonTag: "New",
+    disabled: false,
   },
 ];

@@ -77,14 +77,14 @@ export default function Home() {
           {/* //Profile div */}
           <div className="flex items-center justify-between  mt-2">
             <div className="flex gap-x-2 items-center gap-2">
-              <span className="w-8 h-8 rounded-full mt-3">
+              <span className="inline-block w-8 h-8 overflow-hidden rounded-full mt-3">
                 <Image
                   src={profile}
                   width={60}
-                  height={40}
+                  height={60}
                   layout="responsive"
                   className="rounded-full"
-                ></Image>
+                />
               </span>
               <div className="w-full flex flex-col">
                 <span className="text-black h-3  mb-2 font-bold">
