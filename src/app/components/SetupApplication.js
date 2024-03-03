@@ -7,6 +7,8 @@ import "./stepper.css";
 import Button from "./Button";
 import NewButton from "./NewButton";
 import ToggleSwitch from "./ToggleSwitch";
+import { RxDragHandleDots2 } from "react-icons/rx";
+import { RiDeleteBin6Line } from "react-icons/ri";
 
 const SetupApplication = () => {
   return (
@@ -28,6 +30,20 @@ const SetupApplication = () => {
             description={"Text Field"}
             required={"Marked as Required"}
             bgcolor={"[#EFF4F7]"}
+            icon1={
+              <RiDeleteBin6Line
+                size={40}
+                color="#8D9499"
+                className="font-bold px-2 py-1 bg-white rounded-full"
+              />
+            }
+            icon2={
+              <RxDragHandleDots2
+                size={30}
+                color="#8D9499"
+                className="font-bold"
+              />
+            }
           />
           <SetUpField
             icon={
@@ -41,6 +57,20 @@ const SetupApplication = () => {
             description={"Text Field"}
             required={"Marked as Required"}
             bgcolor={"[#EFF4F7]"}
+            icon1={
+              <RiDeleteBin6Line
+                size={40}
+                color="#8D9499"
+                className="font-bold px-2 py-1 bg-white rounded-full"
+              />
+            }
+            icon2={
+              <RxDragHandleDots2
+                size={30}
+                color="#8D9499"
+                className="font-bold"
+              />
+            }
           />
           <SetUpField
             icon={
@@ -53,6 +83,13 @@ const SetupApplication = () => {
             description={""}
             description2={"Allow users paste a link"}
             bgcolor={"[#000000]"}
+            icon2={
+              <RxDragHandleDots2
+                size={30}
+                color="#8D9499"
+                className="font-bold"
+              />
+            }
           />
         </div>
       </div>

@@ -1,6 +1,4 @@
 import React from "react";
-import { RxDragHandleDots2 } from "react-icons/rx";
-import { RiDeleteBin6Line } from "react-icons/ri";
 import { IoToggle } from "react-icons/io5";
 import ToggleSwitch from "./ToggleSwitch";
 
@@ -12,6 +10,8 @@ const SetUpField = ({
   description2,
   required,
   bgcolor,
+  icon1,
+  icon2,
 }) => {
   return (
     <div
@@ -34,12 +34,8 @@ const SetUpField = ({
         </div>
       </div>
       <div className="flex items-center gap-x-2">
-        <RiDeleteBin6Line
-          size={40}
-          color="#8D9499"
-          className="font-bold px-2 py-1 bg-white rounded-full"
-        />
-        <RxDragHandleDots2 size={30} color="#8D9499" className="font-bold" />
+        {icon1 && icon1}
+        {icon2}
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import {
   PiChartBarHorizontalLight,
   PiFlagCheckeredLight,
 } from "react-icons/pi";
+import { PiFlagCheckeredBold } from "react-icons/pi";
 
 export const data = [
   {
@@ -23,7 +24,7 @@ export const data = [
     id: 2,
     label: "Applications",
     path: "/new-application",
-    icon: <PiFlagCheckeredLight size={30} />,
+    icon: <PiFlagCheckeredBold size={30} />,
     buttonTag: "New",
     disabled: false,
   },
