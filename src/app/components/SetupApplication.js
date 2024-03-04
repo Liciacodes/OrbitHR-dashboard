@@ -44,6 +44,7 @@ const SetupApplication = () => {
                 className="font-bold"
               />
             }
+            spacing="ml-[-16px]"
           />
           <SetUpField
             icon={
@@ -71,6 +72,7 @@ const SetupApplication = () => {
                 className="font-bold"
               />
             }
+            spacing="ml-[-16px]"
           />
           <SetUpField
             icon={

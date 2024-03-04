@@ -12,6 +12,7 @@ const SetUpField = ({
   bgcolor,
   icon1,
   icon2,
+  spacing,
 }) => {
   return (
     <div
@@ -24,10 +25,10 @@ const SetUpField = ({
           <p className="text-[12px] text-[#8D9499]">{description}</p>
           <div className="flex items-center">
             {toggle && toggle}
-            <p className="text-[#8D9499] text-[14px] ">
+            <p className={`${spacing && spacing} text-[#8D9499] text-[14px]  `}>
               {required && required}
             </p>
-            <p className="text-[#8D9499] text-[14px] ">
+            <p className="text-[#8D9499] text-[14px] ml-0 ">
               {description2 && description2}
             </p>
           </div>
