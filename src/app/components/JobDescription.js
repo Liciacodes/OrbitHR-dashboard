@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaRegCircleCheck } from "react-icons/fa6";
 import { PiTimerBold } from "react-icons/pi";
 import { IoTextOutline } from "react-icons/io5";
@@ -6,8 +6,29 @@ import { PiTextB } from "react-icons/pi";
 import { CiTextAlignRight } from "react-icons/ci";
 import { PiSparkleFill } from "react-icons/pi";
 import { PiLinkSimpleBold } from "react-icons/pi";
+import ClipboardCopiedModal from "./ClipboardCopiedModal";
 
 const JobDescription = () => {
+  const [inputValue, setInputValue] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const copyText = () => {
+    const selectedText = window.getSelection().toString();
+    if (selectedText) {
+      navigator.clipboard
+        .writeText(selectedText)
+        .then(() => {
+          setIsModalOpen(true);
+        })
+        .catch((error) => {
+          console.error("Failed to copy to clipboard: ", error);
+        });
+    }
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="mt-0 sm:mt-[-20px] sm:w-[530px] w-[80%] sm:h-[700px] h-full ">
       <div>
@@ -26,7 +47,11 @@ const JobDescription = () => {
           <textarea
             className="w-full h-[270px] outline-none bg-[#F9FDFF] text-lg p-4"
             id="myInput"
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            onSelect={copyText}
           ></textarea>
+
           <div className="flex h-[60px] mt-[-9px]">
             <div className="flex items-center justify-start gap-x-6  border border-[#EFF4F7] px-2 w-[290px]">
               <IoTextOutline color="#8D9499" size={25} />
@@ -40,6 +65,8 @@ const JobDescription = () => {
           </div>
         </div>
       </div>
+
+      <ClipboardCopiedModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 };
