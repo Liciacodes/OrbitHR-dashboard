@@ -62,7 +62,7 @@ export default function page() {
               candidates.
             </p>
           </div>
-          <div className="flex flex-col mx-8 mt-4">
+          <div className="flex flex-col mx-8 mt-5">
             <EditFields
               icon={
                 <RxLetterCaseCapitalize

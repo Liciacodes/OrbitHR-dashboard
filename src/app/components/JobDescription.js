@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaRegCircleCheck } from "react-icons/fa6";
 import { PiTimerBold } from "react-icons/pi";
 import { IoTextOutline } from "react-icons/io5";
@@ -6,19 +6,15 @@ import { PiTextB } from "react-icons/pi";
 import { CiTextAlignRight } from "react-icons/ci";
 import { PiSparkleFill } from "react-icons/pi";
 import { PiLinkSimpleBold } from "react-icons/pi";
-import ClipboardCopiedModal from "./ClipboardCopiedModal";
 
 const JobDescription = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isIconBold, setIsIconBold] = useState(true);
   const [inputValue, setInputValue] = useState("");
 
   const handleBold = () => {
     document.getElementById("myInput").style.fontWeight = "bold";
   };
 
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
   return (
     <div className="mt-0 sm:mt-[-20px] sm:w-[530px] w-[80%] sm:h-[700px] h-full ">
       <div>
@@ -51,7 +47,9 @@ const JobDescription = () => {
               />
               <PiTextB
                 color="#8D9499"
-                className="cursor-pointer"
+                className={
+                  isIconBold ? "cursor-pointer font-bold" : "cursor-pointer"
+                }
                 size={25}
                 onMouseDown={handleBold}
               />
@@ -74,8 +72,6 @@ const JobDescription = () => {
           </div>
         </div>
       </div>
-
-      <ClipboardCopiedModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 };
