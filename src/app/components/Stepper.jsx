@@ -3,7 +3,7 @@ import { Stepper } from "@mantine/core";
 import Button2 from "./Button2";
 import ToggleSwitch from "./ToggleSwitch";
 import BasicDetails from "./BasicDetails";
-import JobDescription from "./JobDescription";
+import JobDescription from "./JobDescription.js";
 import SetupApplication from "./SetupApplication";
 
 const StepperComponent = () => {
