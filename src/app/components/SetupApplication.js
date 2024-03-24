@@ -9,6 +9,7 @@ import NewButton from "./NewButton";
 import ToggleSwitch from "./ToggleSwitch";
 import { RxDragHandleDots2 } from "react-icons/rx";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 
 const SetupApplication = () => {
   const [fields, setFields] = useState([
@@ -24,6 +25,7 @@ const SetupApplication = () => {
           className="w-10 h-10 rounded-full bg-white text-[#8D9499] py-1 px-2 mt-2"
         />
       ),
+      toggle: <ToggleSwitch />,
     },
     {
       id: 2,
@@ -37,6 +39,7 @@ const SetupApplication = () => {
           className="w-10 h-10 rounded-full bg-white text-[#8D9499] py-1 px-2 mt-2"
         />
       ),
+      toggle: <ToggleSwitch />,
     },
   ]);
   const handleDeleteField = (fieldId) => {
@@ -55,6 +58,7 @@ const SetupApplication = () => {
               key={field.id}
               icon={field.icon}
               title={field.title}
+              toggle={field.toggle}
               description={field.description}
               required={field.required}
               bgcolor={field.bgcolor}

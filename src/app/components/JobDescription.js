@@ -38,7 +38,7 @@ const JobDescription = () => {
             contentEditable="true"
           ></section>
 
-          <div className="flex h-[60px] mt-[-6px]">
+          <div className="flex h-[60px] mt-[-4.5px]">
             <div className="flex items-center justify-start gap-x-6  border border-[#EFF4F7] px-2 w-[290px]">
               <IoTextOutline
                 color="#8D9499"

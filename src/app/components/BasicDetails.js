@@ -6,10 +6,20 @@ import TextField from "@mui/material/TextField";
 const BasicDetails = () => {
   const [isChecked, setIsChecked] = useState(false);
   const [toggle, setToggle] = useState(true);
+  const [employmentType, setEmploymentType] = useState("");
+  const [selectedCountry, setSelectedCountry] = useState(null);
 
   const handleToggle = () => {
     setToggle(!toggle);
   };
+
+  const handleEmploymentType = (type) => {
+    setEmploymentType(type === employmentType ? "" : type); // Toggle selected employment type
+  };
+
+  // const handleCountryChange = (event) => {
+  //   setSelectedCountry(event.target.value);
+  // };
 
   return (
     <div className=" sm:w-[540px] w-full sm:mt-[-30px] mt-0  sm:h-[700px] h-full">
@@ -32,10 +42,26 @@ const BasicDetails = () => {
           Choose Employment Type
         </label>
         <div className="flex ">
-          <Button2 label={"Freelance"} />
-          <Button2 label={"FullTime"} />
-          <Button2 label={"Contract"} />
-          <Button2 label={"Consultancy"} />
+          <Button2
+            label={"Freelance"}
+            onClick={() => handleEmploymentType("Freelance")}
+            selected={employmentType === "Freelance"}
+          />
+          <Button2
+            label={"FullTime"}
+            onClick={() => handleEmploymentType("FullTime")}
+            selected={employmentType === "FullTime"}
+          />
+          <Button2
+            label={"Contract"}
+            onClick={() => handleEmploymentType("Contract")}
+            selected={employmentType === "Contract"}
+          />
+          <Button2
+            label={"Consultancy"}
+            onClick={() => handleEmploymentType("Consultancy")}
+            selected={employmentType === "Consultancy"}
+          />
         </div>
       </div>
       <div className="flex w-full items-stretch justify-between mt-6 ">
