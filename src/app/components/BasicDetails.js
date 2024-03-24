@@ -4,22 +4,27 @@ import ToggleSwitch from "./ToggleSwitch";
 import TextField from "@mui/material/TextField";
 
 const BasicDetails = () => {
-  const [isChecked, setIsChecked] = useState(false);
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState({
+    fullyRemote: false,
+    partiallyRemote: false,
+    hybrid: false,
+    onsite: false,
+    americian: false,
+    emea: false,
+    all: false,
+  });
   const [employmentType, setEmploymentType] = useState("");
-  const [selectedCountry, setSelectedCountry] = useState(null);
-
-  const handleToggle = () => {
-    setToggle(!toggle);
-  };
 
   const handleEmploymentType = (type) => {
     setEmploymentType(type === employmentType ? "" : type); // Toggle selected employment type
   };
 
-  // const handleCountryChange = (event) => {
-  //   setSelectedCountry(event.target.value);
-  // };
+  const handleChange = (event) => {
+    setToggle({
+      ...toggle,
+      [event.target.name]: event.target.checked,
+    });
+  };
 
   return (
     <div className=" sm:w-[540px] w-full sm:mt-[-30px] mt-0  sm:h-[700px] h-full">
@@ -111,41 +116,48 @@ const BasicDetails = () => {
       <div className="flex w-full items-stretch justify-between mt-3 gap-y-2">
         <div>
           <ToggleSwitch
-            isChecked={isChecked}
-            onChange={handleToggle}
+            onChange={handleChange}
             label={"100% Remote"}
+            name="fullyRemote"
+            checked={toggle.fullyRemote}
           />
           <ToggleSwitch
-            isChecked={isChecked}
-            onChange={handleToggle}
+            onChange={handleChange}
             label={"Partially Remote"}
+            name="partiallyRemote"
+            checked={toggle.partiallyRemote}
           />
           <ToggleSwitch
-            isChecked={isChecked}
-            onChange={handleToggle}
+            onChange={handleChange}
             label={"Hybrid"}
+            name="hybrid"
+            checked={toggle.hybrid}
           />
           <ToggleSwitch
-            isChecked={isChecked}
-            onChange={handleToggle}
+            onChange={handleChange}
             label={"Onsite"}
+            name="onsite"
+            checked={toggle.onsite}
           />
         </div>
         <div className="mr-20">
           <ToggleSwitch
-            isChecked={isChecked}
-            onChange={handleToggle}
+            onChange={handleChange}
             label={"Americian"}
+            name="americian"
+            checked={toggle.americian}
           />
           <ToggleSwitch
-            isChecked={isChecked}
-            onChange={handleToggle}
+            onChange={handleChange}
             label={"EMEA"}
+            name="emea"
+            checked={toggle.emea}
           />
           <ToggleSwitch
-            isChecked={isChecked}
-            onChange={handleToggle}
+            onChange={handleChange}
             label={"All"}
+            name="all"
+            checked={toggle.all}
           />
         </div>
       </div>

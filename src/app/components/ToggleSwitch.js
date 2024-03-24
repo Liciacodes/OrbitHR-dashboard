@@ -1,10 +1,12 @@
 import { Switch, FormControlLabel } from "@mui/material";
-function ToggleSwitch({ label }) {
+function ToggleSwitch({ label, onChange, checked }) {
   return (
     <div className="text-[#8D9499]">
       <FormControlLabel
         control={<Switch defaultChecked color="default" />}
         label={label}
+        onChange={onChange}
+        checked={checked}
       />
     </div>
   );
