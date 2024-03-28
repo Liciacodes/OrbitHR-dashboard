@@ -4,6 +4,7 @@ import ToggleSwitch from "./ToggleSwitch";
 import TextField from "@mui/material/TextField";
 
 const BasicDetails = () => {
+  const [employmentType, setEmploymentType] = useState("");
   const [toggle, setToggle] = useState({
     fullyRemote: false,
     partiallyRemote: false,
@@ -13,16 +14,16 @@ const BasicDetails = () => {
     emea: false,
     all: false,
   });
-  const [employmentType, setEmploymentType] = useState("");
 
   const handleEmploymentType = (type) => {
     setEmploymentType(type === employmentType ? "" : type); // Toggle selected employment type
   };
 
-  const handleChange = (event) => {
+  const handleChange = (name) => (event) => {
+    const checked = event.target.checked;
     setToggle({
       ...toggle,
-      [event.target.name]: event.target.checked,
+      [name]: checked,
     });
   };
 
@@ -116,25 +117,25 @@ const BasicDetails = () => {
       <div className="flex w-full items-stretch justify-between mt-3 gap-y-2">
         <div>
           <ToggleSwitch
-            onChange={handleChange}
             label={"100% Remote"}
             name="fullyRemote"
             checked={toggle.fullyRemote}
+            onChange={handleChange("fullyRemote")}
           />
           <ToggleSwitch
-            onChange={handleChange}
+            onChange={handleChange("partiallyRemote")}
             label={"Partially Remote"}
             name="partiallyRemote"
             checked={toggle.partiallyRemote}
           />
           <ToggleSwitch
-            onChange={handleChange}
+            onChange={handleChange("hybrid")}
             label={"Hybrid"}
             name="hybrid"
             checked={toggle.hybrid}
           />
           <ToggleSwitch
-            onChange={handleChange}
+            onChange={handleChange("onsite")}
             label={"Onsite"}
             name="onsite"
             checked={toggle.onsite}
@@ -142,19 +143,19 @@ const BasicDetails = () => {
         </div>
         <div className="mr-20">
           <ToggleSwitch
-            onChange={handleChange}
+            onChange={handleChange("americian")}
             label={"Americian"}
             name="americian"
             checked={toggle.americian}
           />
           <ToggleSwitch
-            onChange={handleChange}
+            onChange={handleChange("emea")}
             label={"EMEA"}
             name="emea"
             checked={toggle.emea}
           />
           <ToggleSwitch
-            onChange={handleChange}
+            onChange={handleChange("all")}
             label={"All"}
             name="all"
             checked={toggle.all}

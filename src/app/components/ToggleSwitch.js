@@ -1,33 +1,31 @@
 import { Switch, FormControlLabel } from "@mui/material";
-function ToggleSwitch({ label, onChange, checked }) {
+function ToggleSwitch({ label, checked, onChange }) {
   return (
-    <div className="text-[#8D9499]">
+    <div className="text-[rgb(141,148,153)]">
       <FormControlLabel
-        control={<Switch defaultChecked color="default" />}
+        control={
+          <Switch
+            color="default"
+            checked={checked}
+            onChange={onChange}
+            inputProps={{ "aria-label": "controlled" }}
+            sx={{
+              "& .MuiSwitch-thumb": {
+                color: checked ? "green" : "#ccc", // Change thumb color when switch is checked
+              },
+              "& .MuiSwitch-track": {
+                backgroundColor: checked ? "gray" : "#ccc", // Change track color when switch is checked
+              },
+            }}
+          />
+        }
         label={label}
-        onChange={onChange}
-        checked={checked}
       />
     </div>
   );
 }
 
 export default ToggleSwitch;
-
-{
-  {
-    /* <Switch
-        label={label}
-        className="text-[#8D9499] text-[14px]  font-normal leading-[16.94px]"
-        size="small"
-      /> */
-  }
-  /* <FormGroup>
-  <FormControlLabel control={<Switch defaultChecked />} label="Label" />
-  <FormControlLabel required control={<Switch />} label="Required" />
-  <FormControlLabel disabled control={<Switch />} label="Disabled" />
-</FormGroup>; */
-}
 
 // components/ToggleSwitch.js
 // import React from "react";
