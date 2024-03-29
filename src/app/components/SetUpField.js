@@ -22,7 +22,7 @@ const SetUpField = ({
         <div className="mr-3">{icon && icon}</div>
         <div className="flex flex-col text-[#000000]">
           <p>{title}</p>
-          <p className="text-[12px] text-[#8D9499]">{description}</p>
+          <p className="text-[15px] text-[#8D9499]">{description}</p>
           <div className="flex items-center">
             {toggle && toggle}
             <p className={`${spacing && spacing} text-[#8D9499] text-[14px]  `}>

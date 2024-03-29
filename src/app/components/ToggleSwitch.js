@@ -11,7 +11,7 @@ function ToggleSwitch({ label, checked, onChange }) {
             inputProps={{ "aria-label": "controlled" }}
             sx={{
               "& .MuiSwitch-thumb": {
-                color: checked ? "green" : "#ccc", // Change thumb color when switch is checked
+                color: checked ? "#2194FF" : "#ccc", // Change thumb color when switch is checked
               },
               "& .MuiSwitch-track": {
                 backgroundColor: checked ? "gray" : "#ccc", // Change track color when switch is checked
