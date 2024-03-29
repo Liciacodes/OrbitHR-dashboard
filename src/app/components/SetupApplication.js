@@ -123,7 +123,7 @@ const SetupApplication = () => {
       </div>
 
       <NewButton
-        label={"Preview, the Publish"}
+        label={"Preview, then Publish"}
         className={
           "w-full mt-8 mb-12 text-white bg-[#2194FF] h-[55px] leading-[19.36px] font-medium py-[0.6875rem] px-[0.75rem] rounded-2xl flex items-center justify-center gap-2"
         }
