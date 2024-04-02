@@ -9,6 +9,7 @@ import NewButton from "./NewButton";
 import ToggleSwitch from "./ToggleSwitch";
 import { RxDragHandleDots2 } from "react-icons/rx";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
 const SetupApplication = () => {
   const [fields, setFields] = useState([
@@ -65,95 +66,82 @@ const SetupApplication = () => {
     );
   };
 
+  const handleDragEnd = (result) => {
+    if (!result.destination) return;
+
+    const items = Array.from(fields);
+    const [reorderedItem] = items.splice(result.source.index, 1);
+    items.splice(result.destination.index, 0, reorderedItem);
+
+    setFields(items);
+  };
+
   return (
-    <div className="sm:mt-[-30px] mt-0  sm:w-[600px] w-full">
-      <div>
-        <h1 className="text-black  font-semibold leading-[19.36px] text-[1rem] ">
-          Set Application Form
-        </h1>
-        <div className="flex flex-col mt-2 w-full">
-          {fields.map((field) => (
-            <SetUpField
-              key={field.id}
-              icon={field.icon}
-              title={field.title}
-              toggle={<ToggleSwitch {...field.toggle} />}
-              description={field.description}
-              required={field.required}
-              bgcolor={field.bgcolor}
-              icon1={
-                <RiDeleteBin6Line
-                  size={40}
-                  color="#8D9499"
-                  className="font-bold px-2 py-1 bg-white rounded-full"
-                  onClick={() => handleDeleteField(field.id)}
-                />
-              }
-              icon2={
-                <RxDragHandleDots2
-                  size={30}
-                  color="#8D9499"
-                  className="font-bold"
-                />
-              }
-              spacing="ml-[-16px]"
-            />
-          ))}
-
-          <SetUpField
-            icon={
-              <PiLinkSimpleBold
-                size={25}
-                className="w-10 h-10 rounded-full bg-[#EFF4F7]  text-[#000000] py-1 px-2 mt-2"
-              />
-            }
-            title={"Link"}
-            description={""}
-            description2={"Allow users paste a link"}
-            bgcolor={"[#000000]"}
-            icon2={
-              <RxDragHandleDots2
-                size={30}
-                color="#8D9499"
-                className="font-bold"
-              />
-            }
-          />
-        </div>
-      </div>
-
+    <DragDropContext onDragEnd={handleDragEnd}>
+      <Droppable droppableId="fields">
+        {(provided) => (
+          <div ref={provided.innerRef} {...provided.droppableProps}>
+            <div className="sm:mt-[-30px] mt-0  sm:w-[600px] w-full">
+              <div>
+                <h1 className="text-black font-semibold leading-[19.36px] text-[1rem]">
+                  Set Application Form
+                </h1>
+                <div className="flex flex-col mt-2 w-full">
+                  {fields.map((field, index) => (
+                    <Draggable
+                      key={field.id}
+                      draggableId={field.id.toString()}
+                      index={index}
+                    >
+                      {(provided) => (
+                        <div
+                          ref={provided.innerRef}
+                          {...provided.draggableProps}
+                          {...provided.dragHandleProps}
+                        >
+                          <SetUpField
+                            icon={field.icon}
+                            title={field.title}
+                            toggle={<ToggleSwitch {...field.toggle} />}
+                            description={field.description}
+                            required={field.required}
+                            bgcolor={field.bgcolor}
+                            icon1={
+                              <RiDeleteBin6Line
+                                size={40}
+                                color="#8D9499"
+                                className="font-bold px-2 py-1 bg-white rounded-full"
+                                onClick={() => handleDeleteField(field.id)}
+                              />
+                            }
+                            icon2={
+                              <RxDragHandleDots2
+                                size={30}
+                                color="#8D9499"
+                                className="font-bold"
+                              />
+                            }
+                            spacing="ml-[-16px]"
+                          />
+                        </div>
+                      )}
+                    </Draggable>
+                  ))}
+                </div>
+              </div>
+            </div>
+            {provided.placeholder}
+          </div>
+        )}
+      </Droppable>
       <NewButton
         label={"Preview, then Publish"}
         className={
           "w-full mt-8 mb-12 text-white bg-[#2194FF] h-[55px] leading-[19.36px] font-medium py-[0.6875rem] px-[0.75rem] rounded-2xl flex items-center justify-center gap-2"
         }
       />
-    </div>
+    </DragDropContext>
   );
 };
 
 export default SetupApplication;
-
-{
-  /* <div className="flex justify-between mb-4"></div> */
-}
-{
-  /* <div className="flex justify-between">
-          <h1 className="text-black font-medium mt-4 mb-2">Job Descriptions</h1>
-          <div className="flex items-center gap-x-1">
-            <FaRegCircleCheck size={20} color={"#0AAB07"} />
-            <p className="text-[12px]">Completed</p>
-          </div>
-        </div> */
-}
-{
-  /* <div className="flex justify-between">
-          <h1 className="text-black font-medium mt-4 mb-2">
-            Set Application Form
-          </h1>
-          <div className="flex items-center gap-x-1">
-            <PiTimerBold size={20} color={"#F69A0F"} />
-            <p className="text-[12px]">In Progress</p>
-          </div>
-        </div> */
-}

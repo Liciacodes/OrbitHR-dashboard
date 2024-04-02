@@ -10,6 +10,7 @@ import { useState } from "react";
 import ToggleSwitch from "../components/ToggleSwitch";
 import LinkComponent from "../components/LinkComponent";
 import { RxLetterCaseCapitalize } from "react-icons/rx";
+import Link from "next/link";
 import StepperComponent from "../components/Stepper";
 
 export default function page() {
@@ -18,7 +19,7 @@ export default function page() {
       <div className="hidden md:flex justify-between items-center text-[16px] leading-5">
         <div>
           <span className="text-[#FF3434] font-semibold leading-[19.36px]">
-            Cancel
+            <Link href="/">Cancel</Link>
           </span>
         </div>
 
